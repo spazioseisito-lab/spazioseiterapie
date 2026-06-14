@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "spaziosei",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8787", "--directory", "C:/xampp/htdocs/spazioseiterapie"],
+      "port": 8787
+    }
+  ]
+}

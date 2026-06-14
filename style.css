@@ -8,7 +8,8 @@ body {
     min-height: 100vh;
     background: #faf6f0;
     color: #3d2e1e;
-    font-family: Arial, sans-serif;
+    font-family: 'Jost', Arial, sans-serif;
+    font-weight: 300;
 }
 
 .coming-soon {
@@ -21,15 +22,136 @@ body {
 }
 
 .container {
-    max-width: 700px;
+    max-width: 560px;
+    animation: fadeIn 1.2s ease both;
 }
 
+/* Brand */
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.brand-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: #b07d5b;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.brand-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: #3d2e1e;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.brand-sub {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    color: #b07d5b;
+    text-transform: uppercase;
+    margin-top: 0.15rem;
+}
+
+/* Dividers */
+.divider {
+    width: 60px;
+    height: 1px;
+    background: #c9a98a;
+    margin: 0 auto 2.5rem;
+}
+
+.divider.short {
+    width: 30px;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+/* Heading */
 h1 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.6rem;
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    color: #3d2e1e;
 }
 
+h1 em {
+    font-style: italic;
+    color: #7a5c3e;
+}
+
+/* Body text */
 p {
-    font-size: 1.25rem;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 2;
+    color: #6b4f35;
+    letter-spacing: 0.02em;
+    margin-bottom: 2rem;
+}
+
+/* Contact */
+.contact {
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    color: #9a7a5a;
+    margin-bottom: 0;
+}
+
+.contact a {
+    display: block;
+    margin-top: 0.4rem;
+    color: #b07d5b;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    transition: color 0.2s ease;
+}
+
+.contact a:hover {
+    color: #3d2e1e;
+}
+
+/* Fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .brand-mark {
+        font-size: 2.8rem;
+    }
+
+    .brand-name {
+        font-size: 1.3rem;
+    }
 }
