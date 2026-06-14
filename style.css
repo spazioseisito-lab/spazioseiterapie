@@ -98,7 +98,7 @@ body::after {
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--text-soft);
-    opacity: 0.5;
+    opacity: 0.75;
     white-space: nowrap;
 }
 
