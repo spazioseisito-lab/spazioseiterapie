@@ -94,18 +94,47 @@ body::after {
     font-family: var(--font-display);
     font-size: clamp(1.25rem, 3.2vw, 1.7rem);
     font-weight: 300;
-    line-height: 1.75;
+    line-height: 1.9;
     color: var(--text-soft);
-    text-align: center;
+    text-align: left;
 }
 
-.wip-claim em {
+/* "spazio" — teal corsivo, richiama il logo */
+.em-spazio {
     font-style: italic;
-    font-family: var(--font-display);
     font-size: 1.2em;
     font-weight: 400;
     color: var(--teal);
     letter-spacing: 0.03em;
+}
+
+/* "séi" — bianco con alone teal sfumato */
+.em-sei {
+    font-style: italic;
+    font-size: 1.2em;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+}
+
+.em-sei::before {
+    content: '';
+    position: absolute;
+    inset: -0.4em -0.7em;
+    background: radial-gradient(ellipse at center, var(--teal-light) 0%, transparent 72%);
+    filter: blur(6px);
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.claim-last {
+    display: inline-block;
+    margin-top: 0.25em;
+    font-size: 0.9em;
+    color: var(--text-soft);
+    opacity: 0.7;
 }
 
 /* ── FOOTER — indirizzo ancorato in basso ── */
